@@ -38,11 +38,11 @@ function main() {
     
   };
   
-  const template = `$adventurer, heed my $message!
+  const template = `$adventurer, heed my $message!\n\n
   
-  I have just come from $pre$post where the $people folk are in desperate need. Their town has been overrun by $baddies. You must venture forth at once, taking my $item, and help them.
+  I have just come from $pre$post where the $people folk are in desperate need. Their town has been overrun by $baddies. You must venture forth at once, taking my $item, and help them.\n\n
   
-  It is told that the one who can rescue them will be awarded with $num $looty $loots. Surely this must tempt one such as yourself! 
+  It is told that the one who can rescue them will be awarded with $num $looty $loots. Surely this must tempt one such as yourself! \n\n
   
   Along your journey, choose wisely from $powerfulWeapons, $powerfulWeapons, or the formidable $powerfulWeapons; each holds the key to vanquishing darkness and restoring peace.
   `;
@@ -61,16 +61,18 @@ function main() {
     }
   }
   
-  function generate() {
+  function generate() { //edited with the help of GPT 
     let story = template;
     while (story.match(slotPattern)) {
       story = story.replace(slotPattern, replacer);
     }
   
-    /* global box */
-    $("#box").text(story);
-
+    // Split the story into paragraphs and wrap each in <p> tags
+    let paragraphs = story.split('\n\n').map(para => `<p>${para.trim()}</p>`).join('');
+  
+    $("#box").html(paragraphs); // Use .html() instead of .text()
   }
+  
   
   /* global clicker */
   $("#clicker").click(generate);
@@ -81,4 +83,4 @@ function main() {
 }
 
 // let's get this party started - uncomment me
-//main();
+main();

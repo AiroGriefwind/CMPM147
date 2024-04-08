@@ -1,24 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Hello!</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="/script.js" defer></script>
-  </head>
-  <body>
-    <button id="clicker">
-      Embark Once More
-    </button>
-    <div
-      style="font-family: 'Courier New', monospace; border: 2px dashed teal; padding: 20px; margin: 20px; box-shadow: 4px 4px 8px teal; background: lavender;"
-      id="box"
-    >
-    </div>
-    <footer>
-      <p style="text-align: center;">&copy; 2024 by Ziyuan Wang, created for CM147</p>
-    </footer>
-  </body>
-</html>
+<html>
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Experiment 1 - Hello Generator</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="../css/site.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- JavaScript Libraries -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.js"></script>
+
+	<!-- Project Specific JavaScript -->
+	<script type="text/javascript" src="../js/site.js" defer></script>
+	<script type="text/javascript" src="./js/project.js" defer></script>
+</head>
+
+
+<body>
+	<main id="content">
+		<section>
+			<h1>Experiment 1 - Hello Generator</h1>
+			<p class="translation-credit"> <!--created with the help of GPT-->
+				Translated from 
+				<a href="https://helloworldgenerator.glitch.me" target="_blank" rel="noopener noreferrer">
+				  cmpm147-ex01-HelloWorldGenerator
+				</a> 
+				on glitch.com
+			  </p>
+			<div class="minor-section">
+				<div id="canvas-container">
+					<button id="clicker">Embark Once More</button>
+					<div id="box"
+						style="font-family: 'Courier New', monospace; border: 2px dashed teal; padding: 20px; margin: 20px; box-shadow: 4px 4px 8px teal; background: lavender;">
+					</div>
+				</div>
+				<div class="fullscreen-box">
+					<button id="fullscreen">Fullscreen</button>
+				</div>
+			</div>
+			<div class="minor-section">
+				<h2>Description</h2>
+				<p>Play around with Glitch, Live Server Extenstion of VSCode and mourn my not-so-well-built cm125 project.</p>
+			</div>
+			<div class="minor-section">
+				<h2>Technical</h2>
+				<p>Have no idea how to implement the same style and paragraph splitting I had on Glitch so I turned to GPT for help.</p>
+			</div>
+			<div class="minor-section">
+				<h2>Reflection</h2>
+				<p>I wonder if there's a better way to implement the pics in the README on glitch, should the number goes up. Copying each pic's URL is a tedious task.</p>
+			</div>
+		</section>
+		<nav id="links" class="minor-section">
+			<ul>
+				<li><a href="../index.html">Home</a></li>
+			</ul>
+		</nav>
+	</main>
+</body>
+
+</html>
