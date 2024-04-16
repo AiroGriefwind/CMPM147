@@ -47,6 +47,7 @@ function setup() {
   myInstance = new MyClass(VALUE1, VALUE2);
 
   // Create "reimagine" button
+  // Created with the help of GPT
   let reimagineButton = createButton('Reimagine');
   reimagineButton.mousePressed(reimagine);
   reimagineButton.parent('canvas-container'); // Adjust this if you have a specific element to attach the button to
@@ -59,6 +60,7 @@ function setup() {
 }
 
 // Reimagine button event handler
+// Created with the help of GPT
 function reimagine() {
   seed++;
 }
