@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 4b - Monstrous Eyeballs</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/site.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+    <script src="../js/site.js" DEFER></script>
+    <script src="./js/project.js" DEFER></script>
+    <script src="./js/sketch.js" DEFER></script>
+    <script src="./js/xxhash.min.js"></script>
+</head>
+<body>
+    <main id="content">
+        <section>
+            <h1>Experiment 4b - Monstrous Eyeballs</h1>
+            <div class="minor-section">
+                <div id="canvas-container"></div>
+                <div class="fullscreen-box">
+                    <button id="fullscreen">Fullscreen</button>
+                </div>
+            </div>
+            <div class="minor-section">
+                <h2>Description</h2>
+                <p>Every tile is a monstrous eyeball, and they all stare at the audience’s cursor (mouseX,mouseY).</p>
+            </div>
+            <div class="minor-section">
+                <h2>Technical</h2>
+                <p>Clicking on Tiles: Triggers eye animations and plays one of two sound effects, chosen based on a hash function of the tile's coordinates. This interaction is not only about altering visuals but also about immersing the user in the auditory landscape of each tile.
+					Cursor Movement: Influences the direction each eyeball looks, making the entire grid responsive to the user's movements, further enhancing the feeling of a living, breathing digital organism.</p>
+            </div>
+            <div class="minor-section">
+                <h2>Reflection</h2>
+                <p>Implementing the click animation, and integrating into portfolio.</p>
+            </div>
+        </section>
+        <nav id="links" class="minor-section">
+            <button id="homeButton" onclick="window.location.href='../index.html';">Home</button>
+        </nav>
+    </main>
+</body>
+</html>
