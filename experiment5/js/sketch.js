@@ -1,6 +1,6 @@
 // sketch.js - purpose and description here
-// Author: Your Name
-// Date:
+// Author: Ziyuan Wang
+// Date: 5/7/2024
 
 // Here is how you might set up an OOP p5.js project
 // Note that p5.js looks for a file called sketch.js
@@ -178,7 +178,7 @@ function p4_inspirations() {
       }];
 }
 function p4_initialize(inspiration) {
-  // Assuming the image has been loaded and resizeCanvas has been set appropriately
+ 
   resizeCanvas(inspiration.image.width / 4, inspiration.image.height / 4);
 
   let design = {
@@ -187,7 +187,7 @@ function p4_initialize(inspiration) {
   };
 
   // Initialize rectangles with random positions and sizes
-  for (let i = 0; i < 100; i++) {  // Less number but more varied
+  for (let i = 0; i < 100; i++) {  
     let x = random(width);
     let y = random(height);
     let rectWidth = random(20, width / 4); // Random width between 20px and quarter canvas width
@@ -206,8 +206,8 @@ function p4_initialize(inspiration) {
 
    // Add the inspiration image to the canvas
    //Generated with the help of GPT
-   let canvasContainer = $('.image-container'); // Select the container using jQuery
-   let canvasWidth = canvasContainer.width(); // Get the width of the container
+   let canvasContainer = $('.image-container'); 
+   let canvasWidth = canvasContainer.width(); 
    const imgHTML = `<img src="${inspiration.assetUrl}" style="width:${canvasWidth}px;">`
    $('#inspiration').empty();
    $('#inspiration').append(imgHTML);
@@ -219,13 +219,13 @@ function p4_initialize(inspiration) {
 
 //Generated with the help of GPT
 function p4_render(design, inspiration) {
-  //console.log("Rendering design with", design.rectangles.length, "rectangles.");
+  
   background(design.bg);
 
   // Use a different variable name to avoid overshadowing the p5.js 'rect' function
   design.rectangles.forEach(r => {
     fill(r.fill);
-    //console.log("Drawing rect at", r.x, r.y, "with size", r.width, "x", r.height);
+    
     rect(r.x, r.y, r.width, r.height);  // Ensure this is calling the p5.js 'rect' function
   });
 }
