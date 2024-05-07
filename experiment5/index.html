@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- This title is used for tabs and bookmarks -->
+	<title>Experiment 5 - Evolutionary Impressions</title>
+
+	<!-- Use UTF character set, a good idea with any webpage -->
+	<meta charset="UTF-8" />
+	<!-- Set viewport so page remains consistently scaled w narrow devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Include CSS file, including a site-wide CSS and for this particular page -->
+	<link rel="stylesheet" type="text/css" href="../css/site.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- Load jQuery library -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+	<!-- Load p5.js library -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.js"></script>
+
+	<!-- Link to javascript files - DEFER waits until all elements are rendered -->
+    <script type="text/javascript" src="../js/site.js" DEFER></script>
+	<!-- Use me for a JavaScript OOP Project -->
+	<script type="text/javascript" src="./js/project.js" DEFER></script>
+	<!-- Use me for a p5.js project -->
+	<script type="text/javascript" src="./js/sketch.js" DEFER></script>
+</head>
+<body>
+	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
+	<main id="content">
+		<section>
+
+			<h1>Experiment 5 - Evolutionary Impressions</h1>
+			<div class="minor-section">
+				<select id="dropper"></select>
+					<button id="restart">restart</button>
+			</div>
+			<div class="minor-section">
+				<div id="canvas-container">
+					<div class="image-container">
+						<p id="inspiration"></p>
+						<p class="caption"></p>
+						<p id="active"></p>
+						<p id="best"></p>
+					</div>
+					
+				</div>
+                <div class="fullscreen-box">
+                    <button id="fullscreen">Fullscreen</button>
+                </div>
+			</div>
+			<div class="minor-section">
+				<div id="canvas-container">
+					<p>
+						Mutation rate (<span id="rate"></span>%):<br /><input
+						id="slider"
+						type="range"
+						min="1"
+						max="100"
+						value="100"
+						/>
+						</p>
+						<p id="active"></p>
+						<p>Active score: <span id="activeScore"></span></p>
+						<p>Exploration rate: <span id="fpsCounter"></span> fps</p>
+						<p id="best"></p>
+						<p>Best score: <span id="bestScore"></span></p>
+						<p id="memory" data-max-items="16"></p>
+				</div>
+                
+			</div>
+			<div class="minor-section">
+				<h2>Description</h2>
+				<p>A generator that directly reads inspiring images, renders parameterized images, and adjusts its own designs to optimize an evaluation score.
+				</p>
+			</div>
+
+			<div class="minor-section">
+				<h2>Technical</h2>
+				<p>Integration of Inspiring Images: The project incorporates a selection of three inspiring images accessible via a dropdown menu, which users can choose from to influence the behavior and output of the image generator.</p>
+				<p>Initialization Based on Inspiration: The initialization function, p4_initialize, adapts its behavior depending on the selected inspiration, leading to unique starting conditions for each image, affecting how the generator interprets these images initially. </p>
+				<p>Rendering Related to Inspiration: The rendering function, p4_render, is designed to process and display results that, though abstract, maintain a visual or thematic connection to the chosen inspiring image, especially after employing a 30-second annealing technique to refine the output. </p>
+				<p>Adaptive Mutation Process: The mutation function, p4_mutate, introduces gradual and controlled changes to the design, with a user-controllable mutation rate slider that allows fine-tuning of the exploration intensity, ranging from near-static to highly dynamic transformations. </p>
+			</div>
+
+			<div class="minor-section">
+				<h2>Reflection</h2>
+				<p>Getting the rectangle function to work, and also integrating into the portfolio website.</p>
+			</div>
+		</section>
+		<nav id="links" class="minor-section">
+			<!-- Put link back to homepage here. -->
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+		</nav>
+	</main>
+</body>
+</html>
